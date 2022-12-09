@@ -9,7 +9,7 @@
         name: abhinav
         comment: abhinav in devops
         uid: 1055
-        group: abhinav
+        # group: abhinav
         password: 'qwerty1234'
         createhome: yes     # Defaults to yes
         home: /home/abhinav    # Defaults to /home/<username>
