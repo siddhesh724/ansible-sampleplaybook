@@ -1,0 +1,15 @@
+---
+- name: Ansible Create user functionlity module demo
+  hosts: ubuntu
+# Defining the remote server where the ansible create user module will manage the objects
+  # remote_user: ubuntu   # Using Remote user as ubuntu
+  tasks:
+    - name: Add the user 'Matt' with a specific uid and a primary group of 'sudo'
+      ansible.builtin.user:
+        name: matt
+        comment: matt_ata
+        uid: 1053
+        group: sudo
+        password: '$5$9IBOdHB1ln.vPNkh$Zgp82bQGI/3CNSfkIjGkL8gantn6lZm7zFswbFywAn3'
+        createhome: yes     # Defaults to yes
+        home: /home/matt    # Defaults to /home/<username>
