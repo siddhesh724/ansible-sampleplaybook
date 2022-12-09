@@ -1,0 +1,15 @@
+[myhost]
+localhost ansible_connection=local
+
+[dev]
+managed-node-01.example.com hostVariableName=hostVariableValue ansible_connection=ssh
+
+[web]
+managed-node-02.example.com
+
+[centos]
+managed-node-03.example.com     ansible_user=centos
+
+[myhost:vars]
+username=myusername
+password=mypassword

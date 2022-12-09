@@ -1,0 +1,17 @@
+# Traversing a List
+---
+- name: Simple For loop example
+  hosts: myhost
+  tasks:
+    - name: This is For loop Task
+      with_items: [AWS, DEVOPS, Linux]
+      debug:
+        msg: "My name is {{ item }}"
+
+    - name: This is For loop Task-2
+      debug:
+        msg: "My name is {{ item }}"
+      with_items:
+        - One
+        - Two
+        - Three
